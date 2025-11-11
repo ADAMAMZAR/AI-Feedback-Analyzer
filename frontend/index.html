@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GiGi - AI Feedback Analyzer</title>
+    <div id="common-head"></div>
+    <script>
+      fetch("header.html")
+        .then((res) => res.text())
+        .then(
+          (html) => (document.getElementById("common-head").innerHTML = html)
+        );
+    </script>
+  </head>
+  <body>
+    <form id="feedbackForm">
+      <div class="row">
+        <input
+          type="text"
+          name="name"
+          placeholder="Input your name here"
+          required
+        />
+      </div>
+      <div class="row mt-3">
+        <input
+          type="email"
+          name="email"
+          placeholder="Input your email here"
+          required
+        />
+      </div>
+      <div class="row mt-3">
+        <textarea name="feedback" placeholder="Your feedback..."></textarea>
+      </div>
+      <div class="row mt-3">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+    <div id="result"></div>
+  </body>
+</html>
